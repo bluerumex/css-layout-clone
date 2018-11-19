@@ -7,6 +7,9 @@
     "start": "parcel index.html"
   },
   "dependencies": {
+    "install": "^0.12.2",
+    "npm": "^6.4.1",
+    "postcss-nesting": "^7.0.0",
     "postcss-preset-env": "^6.4.0"
   },
   "postcss": {
@@ -15,5 +18,8 @@
         "stage": 0
       }
     }
+  },
+  "devDependencies": {
+    "sass": "^1.15.1"
   }
 }

@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
+@import '../styles/reset.css';
+
+.body {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.header {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr) 2fr;
+
+    & .header__menu {
+        display: flex;
+        nav {
+            margin-right: 150px;
+        }
+        span {
+            font-size: 14px;
+            text-decoration-line: underline;
+        }
+        & ul {
+            margin-top: 10px;
+            list-style: none;
+        }
+    }
+}
