@@ -8,8 +8,14 @@
 
 .header {
     margin-top: 20px;
+    margin-bottom: 10px;
     display: grid;
-    grid-template-columns: minmax(180px, 1fr) 2fr;
+    grid-template-columns: minmax(300px, 1fr) 2fr;
+    
+    & .header__logo {
+        font-size: 25px;
+        font-weight: 600;
+    }
 
     & .header__menu {
         display: flex;
@@ -24,5 +30,110 @@
             margin-top: 10px;
             list-style: none;
         }
+    }
+}
+
+.container {
+    height: 100%;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr) minmax(300px, 1fr);
+    grid-template-rows: minmax(150px, 1fr) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+    color: white;
+
+    & .container__item {
+        background-color: dimgray;
+    }
+
+    & :nth-child(1) {
+        grid-row: 1/3;
+        background-color: #74b9ff;
+    }
+
+    & :nth-child(2) {
+        grid-column: 2/4;
+        grid-row: 1/3;
+        background-image: url('https://blogfiles.pstatic.net/MjAxNzAzMjJfMjMg/MDAxNDkwMTg2OTMyODc0.h3xCSro6k94S1P_8jlyUBdGNe_gr_12L0tYG3J325TMg.qcSIfFEl0c9-wx8QG8hOkD5mdIpg1jDBE8IdglRvSHsg.JPEG.gdora/image_2968092481490183348002.jpg?type=w1');
+    }
+
+    & :nth-child(3) {
+        background-color: #00b894;
+    }
+
+    & :nth-child(4) {
+        grid-column: 2/3;
+        grid-row: 3/5;
+        background-image: url('https://images.kbench.com/kbench/article/2018_10/k192039p1n1.jpg');
+    }
+
+    & :nth-child(5) {
+        background-color: #ffeaa7;
+    }
+
+    & :nth-child(6) {
+        background-color: #dfe6e9;
+    }
+    
+    & :nth-child(7) {
+        background-color: #dfe6e9;
+
+    }
+
+    & :nth-child(8) {
+        grid-column: 1/3;
+        grid-row: 5/7;
+        background-color: #fd79a8;
+    }
+
+    & :nth-child(9) {
+        grid-column: 3/4;
+        grid-row: 5/7;
+        background-image: url('http://res.thegear.co.kr/images/20171103/20171103105923013614.jpg');
+    }
+
+    & :nth-child(10) {
+        grid-column: 1/3;
+        grid-row: 7/9;
+        background-color: #55efc4;
+    }
+    
+    & :nth-child(11) {
+    }
+    
+    & :nth-child(12) {
+    }
+    
+    & :nth-child(13) {
+        grid-column: 1/3;
+        grid-row: 9/11;
+        background-color: #a29bfe;
+    }
+    
+    & :nth-child(14) {
+    }
+
+    & :nth-child(15) {
+    }
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 20px;
+
+    & .footer__contact {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    & .footer__contact ul:nth-child(2) {
+        margin-left: 100px;
+    }
+
+    & .footer__copyright {
+        display: flex;
+        justify-content: flex-end;
+        min-width: 300px;
     }
 }
