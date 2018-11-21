@@ -5,8 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Advanced CSS</title>
+    <style>
+        .container ul {
+            display: flex;
+            list-style: none;
+            flex-direction: column;
+
+        }
+
+        .container ul li {
+            flex: 0 1 auto;
+            height: 100px;
+            background-color: #8cacea;
+            padding: 15px;
+            margin: 5px;
+        }
+
+        .container a {
+            font-size: 18px;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
-    <a href="./exercise01/index.html">exercise01</a>
+    <div class="container">
+        <ul>
+            <li>
+                <a href="./exercise01/index.html">exercise01</a>
+            </li>
+            <li>
+                <a href="./exercise02/index.html">exercise02</a>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
