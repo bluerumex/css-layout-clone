@@ -54,7 +54,6 @@ body {
 .feature {
     & .feature__wrapper {
         display: grid;
-        grid-template-columns: minmax(200px, 1fr);
         grid-template-rows: 180px;
         grid-gap: 25px;
         grid-auto-flow: column;
