@@ -24,6 +24,7 @@
     </header>
     <sectioin class="main__background"></sectioin>
     <main class="main">
+        <div class="fake__backgorund"></div>
         <header class="main__header">
             <div class="header__column">
                 <h1 class="main__title">LIST</h1>
@@ -35,15 +36,15 @@
                 </span>
             </div>
         </header>
-
-        <ul class="main__items">
-            <li class="main__item">
-                <img src="https://i.pinimg.com/564x/b7/da/c1/b7dac18ccd7c140257daa854a7c190cc.jpg" alt="">
-                <div class="main__info">
-                    <span class="main__name">Dominic White</span>
-                    <span class="main__friends">12 friends</span>
-                </div>
-                <span class="main__checkbox">
+        <div class="main__container">
+            <ul class="main__items">
+                <li class="main__item">
+                    <img src="https://i.pinimg.com/564x/b7/da/c1/b7dac18ccd7c140257daa854a7c190cc.jpg" alt="">
+                    <div class="main__info">
+                        <span class="main__name">Dominic White</span>
+                        <span class="main__friends">12 friends</span>
+                    </div>
+                    <span class="main__checkbox">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 21.035l-9-8.638 2.791-2.87 6.156 5.874 12.21-12.436 2.843 2.817z"/></svg>
                 </span>
             </li>
@@ -118,7 +119,8 @@
                 </span>
             </li>
         </ul>
-        <button class="main__button">Follow</button>
+    </div>
+    <button class="main__button">Follow</button>
     </main>
 </body>
 </html>
