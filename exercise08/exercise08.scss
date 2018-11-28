@@ -1,0 +1,123 @@
+:root {
+    --bgcolor: #A5ADBD;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+body,
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bgcolor);
+    width: 100vw;
+    height: 100vh;
+}
+
+.contens__container {
+    width: 90vw;
+    height: 80vh;
+    background-color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 15px;
+}
+
+.header .header__title {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.header .header__title-strong {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-left: -10px;
+}
+
+.image__container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-template-rows: 250px;
+    grid-gap: 20px;
+    overflow: scroll;
+    overflow-y: hidden;
+    background-color: #EFEFF7;
+    padding: 10px 200px;
+}
+
+.image__container::-webkit-scrollbar {
+    display: none;
+}
+
+.image__container .image__container-item {
+    background-size: cover;
+    background-position: center center;
+}
+
+.image__container :nth-child(1) {
+    background-image: url('https://i.pinimg.com/564x/55/9c/51/559c517e22d6794a6bedbc1b0accce24.jpg');
+}
+
+.image__container :nth-child(2) {
+    background-image: url('https://i.pinimg.com/564x/cc/f6/66/ccf66601b2d63a01a962f25431f249d3.jpg');
+}
+
+.image__container :nth-child(3) {
+    background-image: url('https://i.pinimg.com/564x/ea/c1/32/eac132ae9cb855fec23f23a4c2e0657a.jpg');
+}
+
+.contents {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+}
+
+.contents .contents__left {
+    padding-left: 200px;
+}
+
+.contents .contents__right {
+    padding-right: 200px;
+}
+
+.contents__subbox .contents__items {
+    display: flex;
+    margin-top: 20px;
+}
+
+.contents__items .contents__item {
+    margin-right: 20px;
+}
+
+.contents__items .contents__item :nth-child(2){
+    color: rgba($color: #000000, $alpha: 0.5)
+}
+
+.contents__subbox p {
+    color: rgba($color: #000000, $alpha: 0.5)
+}
+
+.goback {
+    display: inline-block;
+    border-bottom: 1px solid #BBD6E0;
+}
