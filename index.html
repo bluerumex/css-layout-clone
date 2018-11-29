@@ -6,21 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Advanced CSS</title>
     <style>
-        .container ul {
+        .container {
             display: flex;
-            padding: 0px;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20vh;
+	        box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
+        }
+        
+        .container ul {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 10px;
+            padding: 10px;
             list-style: none;
         }
 
         .container ul li {
             display: flex;
-            align-items: center;
             flex-direction: column;
             height: 100px;
             width: 100px;
             background-color: #8cacea;
-            padding: 15px;
             margin: 5px;
+        }
+        
+        .container ul li .container__item {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .container ul li {
+            transition: transform 1s;
+        }
+        
+        .container ul li:hover {
+            transform:translateY(-5px);	
+            transition: color 0.5s transform 1s;
         }
 
         .container a {
@@ -28,41 +52,61 @@
             font-weight: 600;
             text-decoration: none;
             color: white;
-            display: block;
-            width: 100%;
-            height: 100%;
+            margin: 5px auto;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <h1 class="container__title">EXERCISE</h1>
         <ul>
             <li>
-                <a href="./exercise01/index.html">exercise01</a>
+                <div class="container__item">
+                    <a href="./exercise01/index.html">ex-01</a>
+                </div>
             </li>
             <li>
-                <a href="./exercise02/index.html">exercise02</a>
+                <div class="container__item">
+                    <a href="./exercise02/index.html">ex-02</a>
+                </div>
             </li>
             <li>
-                <a href="./exercise03/index.html">exercise03</a>
+                <div class="container__item">
+                    <a href="./exercise03/index.html">ex-03</a>
+                </div>
             </li>
             <li>
-                <a href="./exercise04/index.html">exercise04</a>
+                <div class="container__item">
+                    <a href="./exercise04/index.html">ex-04</a>
+                </div>
             </li>
             <li>
-                <a href="./exercise05/index.html">exercise05</a>
-                <a href="./exercise05/copy/index.html">exercise05-1</a>
+                <div class="container__item">
+                    <a href="./exercise05/index.html">ex-05</a>
+                    <a href="./exercise05/copy/index.html">ex-05-1</a>
+                </div>
             </li>
             <li>
-                <a href="./exercise06/index.html">exercise06</a>
+                <div class="container__item">
+                    <a href="./exercise06/index.html">ex-06</a>
+                </div>
             </li>
             <li>
-                <a href="./exercise07/index.html">exercise07</a>
-                <a href="./exercise07/copy/index.html">exercise07-1</a>
+                <div class="container__item">
+                    <a href="./exercise07/index.html">ex-07</a>
+                    <a href="./exercise07/copy/index.html">ex-07-1</a>
+                </div>
             </li>
             <li>
-                <a href="./exercise08/index.html">exercise08</a>
-                <a href="./exercise08/copy/index.html">exercise08-1</a>
+                <div class="container__item">
+                    <a href="./exercise08/index.html">ex-08</a>
+                    <a href="./exercise08/copy/index.html">ex-08-1</a>
+                </div>
+            </li>
+            <li>
+                <div class="container__item">
+                    <a href="./exercise09/index.html">ex-09</a>
+                </div>
             </li>
         </ul>
     </div>

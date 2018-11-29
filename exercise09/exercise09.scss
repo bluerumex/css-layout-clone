@@ -1,0 +1,93 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.header .header__menu {
+    padding: 25px 30px;
+    background-color: black;
+    color: white;
+}
+
+.header .header__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 30px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: minmax(600px, 1fr);
+    padding-left: 50px;
+}
+
+.main__column-one {
+    display: flex;
+    align-items: flex-end;
+}
+
+.main__column-one .main__items {
+    display: flex;
+    flex-direction: column;
+}
+
+.main__items .item__subtitle {
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.main__items .item__title {
+    position: relative;
+    left: 90px;
+    z-index: 1;
+    font-size: 120px;
+    font-weight: 600;
+}
+
+.main__items .item__info {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 13px;
+}
+
+.main__items .item__tour {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 100px;
+}
+
+.main__column-two .main__image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: url('https://i.pinimg.com/564x/ba/5f/06/ba5f06d0b257ef81e08cbf51f76d0a4e.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.main__page {
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 20px;
+    background-color: #fff;
+}
