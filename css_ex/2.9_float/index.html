@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>float</title>
+  <style>
+    .box {
+      color: white;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 50px;
+      height: 50px;
+      margin: 0 10px;
+      padding: 10px;
+    }
+
+    .d1 {
+      float: left;
+      background: red;
+    }
+
+    .d2 {
+      overflow: hidden;
+      background: orange;
+    }
+  </style>
+</head>
+<body>
+  <div class="box d1"> float: left; </div>
+  <!-- 
+    d2 요소는 여전히 width가 100%이다.
+    d1 요소가 d2 요소의에 부유해 있는 상태
+
+    d2 요소에 float를 선언하지 않았기 때문에 두 요소간 margin 이 사라지는 문제가
+    생긴다. 이를 위해 d2요소에 overflow: hidden을 선언하면 해결된다.
+    
+    overflow: hidden 프로퍼티는 자식 요소가 부모 요소의 영역보다 클 경우 넘치는 부분을 
+    안보이게 해주는 역할을 하는데 여기서는 float 프로퍼티가 없어서 제대로 표현되지 
+    못하는 요소를 제대로 출력해준다.
+  -->
+  <div class="box d2"> div </div>
+
+  <hr>
+
+  <style>
+    .container {
+      color: white;
+      text-align: center;
+      padding: 10px;
+      background-color: #def0c2;
+      /*
+      첫번째 해결방법 
+      overflow: hidden; 
+      */
+    }
+
+    .clearfix:after {
+      /* 두번째 해결방법 */
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .d3, .d4 {
+      float: left;
+      width: 50%;
+      padding: 20px 0;
+    }
+    .d3 {
+      background-color: #59b1f6;
+    }
+    .d4 {
+      background-color: #ffb5b4;
+    }
+  </style>
+
+  <div class="container clearfix">
+    <div class="d3">1</div>
+    <div class="d4">2</div>
+  </div>
+  <div style="background:red;padding:10px;color:white;">3</div>
+
+</body>
+</html>
