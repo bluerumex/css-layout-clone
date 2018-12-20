@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS EX</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20vh;
+      box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
+    }
+
+    .container ul {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 10px;
+      padding: 10px;
+      list-style: none;
+    }
+
+    .container ul li {
+      display: flex;
+      flex-direction: column;
+      height: 100px;
+      width: 100px;
+      background-color: #8cacea;
+      margin: 5px;
+    }
+
+    .container ul li .container__item {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+    }
+
+    .container ul li {
+      transition: transform 1s;
+    }
+
+    .container ul li:hover {
+      transform: translateY(-5px);
+      transition: color 0.5s transform 1s;
+    }
+
+    .container a {
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      color: white;
+      margin: 5px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>css_ex</h1>
+  <div class="container">
+    <h1 class="container__title">EXERCISE</h1>
+    <ul>
+      <li>
+        <div class="container__item">
+          <a href="./2.4_box_model/index.html">box model</a>
+        </div>
+      </li>
+</body>
+
+</html>
