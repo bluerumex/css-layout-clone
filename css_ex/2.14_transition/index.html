@@ -30,7 +30,7 @@
 
   <hr>
 
-  <div class="square"></div>
+  <div class="square">duration</div>
 
   <style>
     div.square {
@@ -40,6 +40,8 @@
       margin-bottom: 10px;
       transition-property: width, background-color;
       transition-duration: 2s, 2s;
+      color: white;
+      text-align: center;
     }
     div.square:hover {
       width: 300px;
@@ -49,5 +51,128 @@
 
   <hr>
 
+  <h3>transition-timing-function</h3>
+  <div class="func">ease</div>
+  <div class="func">linear</div>
+  <div class="func">ease-in</div>
+  <div class="func">ease-out</div>
+  <div class="func">ease-in-out</div>
+
+  <style>
+    div.func {
+      font: bold 16px/50px "Open Sans";
+      color: white;
+      text-align: center;
+      width: 100px;
+      height: 50px;
+      background-color: red;
+      margin-bottom: 10px;
+      transition: width 2s;
+    }
+
+    div.func:nth-child(1) {
+      transition-timing-function: ease;
+    }
+    div.func:nth-child(2) {
+      transition-timing-function: linear;
+    }
+    div.func:nth-child(3) {
+      transition-timing-function: ease-in;
+    }
+    div.func:nth-child(4) {
+      transition-timing-function: ease-out;
+    }
+    div.func:nth-child(5) {
+      transition-timing-function: ease-in-out;
+    }
+    div.func:hover {
+      width: 300px;
+    }
+  </style>
+
+  <hr>
+
+  <h3>keyframes</h3>
+  <div class="key"></div>
+
+  <style>
+    div.key {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      animation-name: move;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+    }
+
+    /* @keyframes rule */
+    @keyframes move {
+      /* keyframe */
+      from {
+        left: 0;
+      }
+      /* keyframe */
+      to {
+        left: 300px;
+      }
+    }
+  </style>
+
+  <hr>
+
+  <h3>animation name</h3>
+  <div class="aniname"></div>
+
+  <style>
+    div.aniname {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      animation-name: move, fadeOut, changeColor;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+    }
+    @keyframes move {
+      from { left: 0; }
+      to   { left: 300px; }
+    }
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to   { opacity: 0; }
+    }
+    @keyframes changeColor {
+      from { background-color: red; }
+      to   { background-color: blue; }
+    }
+  </style>
+
+  <hr>
+
+  <h3>direction</h3>
+  <div class="con" style="position:relative; width: 300px; height: 300px;">
+    <div class="direction"></div>
+  </div>
+
+  <style>
+    div.direction {
+      width: 100px;
+      height: 100px;
+      background: red;
+      position: absolute;
+      animation: myAnimation 5s infinite;
+      /*홀수번째는 normal로, 짝수번째는 reverse로 진행*/
+      animation-direction: alternate;
+    }
+    @keyframes myAnimation {
+      0%   { background: red;    left: 0px;   top: 0px; }
+      25%  { background: yellow; left: 200px; top: 0px; }
+      50%  { background: blue;   left: 200px; top: 200px; }
+      75%  { background: green;  left: 0px;   top: 200px; }
+      100% { background: red;    left: 0px;   top: 0px; }
+    }
+  </style>
+
+  <hr>
 </body>
 </html>
